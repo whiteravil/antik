@@ -1,0 +1,62 @@
+.header
+	position: absolute
+	z-index: 5
+	padding: 50px 0
+	top: 0
+	left: 0
+	width: 100%
+	
+.header-row
+	display: flex
+	align-items: center
+	
+.header-logo
+	margin-right: auto
+	
+.logo
+	img
+		width: 231px
+		
+.header-menu
+	margin-right: 60px
+
+.menu
+	display: flex
+	align-items: center
+	
+	a
+		+tr
+		font-size: 18px
+		letter-spacing: 0
+		margin-right: 35px
+		color: #000
+		
+		&:hover
+			color: $accent
+			
+		&.active
+			font-weight: 600
+			color: $accent
+		
+		&:last-child
+			margin-right: 0
+		
+			
+.phone
+	+tr
+	font-size: 18px
+	letter-spacing: 0
+	color: #000
+
+	&:hover
+		color: $accent
+		
+.header-menu-btn
+	display: none
+	
+.mob-menu-header
+	display: none
+	
+.header-2
+	position: relative
+	background-color: #F1F1F1

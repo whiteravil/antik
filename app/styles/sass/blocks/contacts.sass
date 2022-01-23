@@ -1,0 +1,95 @@
+.s-contacts
+	position: relative
+	z-index: 1
+
+.contacts
+	display: flex
+	
+.contacts-form
+	width: 58%
+	flex-shrink: 0
+	
+.contacts-info
+	width: 42%
+	flex-shrink: 0
+	border-left: 1px solid rgba(#000, .3)
+	padding-top: 75px
+
+.contacts-section-bg
+	position: absolute
+	z-index: -1
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	
+	img
+		position: absolute
+	
+.contacts-section-bg-img-1
+	width: 58px
+	bottom: 60px
+	left: 0
+	
+.contacts-section-bg-img-2
+	top: 0
+	right: 0
+	width: 239px
+	
+	
+.contacts-section-bg-img-3
+	right: 0
+	top: 0
+	height: 100%
+	width: auto
+	
+.contacts-info
+	padding-left: 150px
+	
+	.h4
+		margin-bottom: 25px
+		
+.contacts-info-item
+	margin-bottom: 35px
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	white-space: nowrap
+	
+	a
+		color: #000 !important
+		+tr
+		position: relative
+		padding-left: 25px
+		margin-bottom: 15px
+		
+		&:last-child
+			margin-bottom: 0
+
+		&:before
+			content: ''
+			position: absolute
+			top: 6px
+			left: 0
+			width: 16px
+			height: 16px
+			background-image: url(../images/dist/icons/phone-dark.svg)
+			background-repeat: no-repeat
+			background-position: center
+			-webkit-background-size: contain
+			background-size: contain
+
+		&:hover
+			opacity: .75
+			
+.contacts-soc
+	margin-bottom: 40px
+	
+.contacts-hours
+	.h4
+		font-size: 20px
+		margin-bottom: 20px
+		
+	p
+		line-height: 1.9
+		margin: 0

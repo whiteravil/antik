@@ -1,0 +1,95 @@
+.soc-callback
+	position: fixed
+	z-index: 5
+	bottom: 40px
+	right: 40px
+	
+	&:not(.opened)
+		.soc-callback-button
+			animation: blink 1s infinite ease
+	
+	&.opened
+		.soc-callback-button
+			opacity: 0
+			transform: scale(.75)
+			
+		.soc-callback-dropdown
+			opacity: 1
+			visibility: visible
+			transform: scale(1)
+			
+	
+.soc-callback-button
+	width: 63px
+	height: 63px
+	background-image: url(../images/dist/icons/messages.svg)
+	background-repeat: no-repeat
+	background-position: center
+	-webkit-background-size: contain
+	background-size: contain
+	cursor: pointer
+	+tr4
+
+@keyframes blink
+	0%
+		opacity: 1
+	50%
+		opacity: .75
+	100%
+		opacity: 1
+
+.soc-callback-dropdown
+	position: absolute
+	bottom: 50px
+	right: 0
+	+tr4
+	visibility: hidden
+	opacity: 0
+	transform-origin: bottom right
+	transform: scale(.75)
+	
+.soc-callback-link
+	display: flex
+	align-items: center
+	white-space: nowrap
+	height: 70px
+	padding: 0 15px
+	background-color: #F1F1F1
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.18)
+	margin-bottom: 15px
+	font-weight: 600
+	color: #000
+	+tr
+	transform-origin: top right
+
+	&:hover
+		color: $accent
+		transform: scale(1.05)
+
+	&:last-child
+		margin-bottom: 0
+
+	img
+		width: 50px
+		flex-shrink: 0
+		height: auto
+		margin-left: 15px
+
+.soc-callback-close
+	position: absolute
+	bottom: -51px
+	right: 0
+	cursor: pointer
+
+	svg
+		width: 41px
+		height: 41px
+
+		path
+			+tr
+			fill: #000
+
+	&:hover
+		svg
+			path
+				fill: $accent

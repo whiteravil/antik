@@ -1,0 +1,54 @@
+.s-categories
+	margin-bottom: 90px
+	
+.categories
+	display: grid
+	grid-template-columns: 1fr 1fr
+	grid-gap: 30px
+	
+.category-item
+	position: relative
+	z-index: 1
+	padding-top: 40px
+	padding-bottom: 40px
+	
+	&:nth-child(odd)
+		padding-right: 60px
+
+		.category-item-img
+			right: 55px
+		
+		&:after
+			right: 0
+			
+	&:nth-child(even)
+		padding-left: 60px
+		
+		&:after
+			left: 0
+	
+	&:after
+		content: ''
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.21)
+		position: absolute
+		height: 100%
+		top: 0
+		background-color: #fff
+		width: calc(50vw - 15px)
+		
+.category-item-content
+	position: relative
+	z-index: 2
+	
+.category-item-img
+	position: absolute
+	z-index: 1
+	top: calc(50% - 65px)
+	right: 0
+
+	img
+		display: block
+		object-fit: contain
+		max-width: 292px
+		height: 131px
+		object-position: center right

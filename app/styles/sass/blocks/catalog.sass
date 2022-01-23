@@ -1,0 +1,113 @@
+.catalog
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: 30px 40px
+
+.catalog-item
+	position: relative
+	height: 200px
+	display: flex
+	align-items: flex-end
+	z-index: 1
+
+	&:hover
+		.catalog-item-title
+			background-color: rgba(#fff, 0.38)
+			color: $accent
+
+			span
+				&:after
+					transform: scaleX(1)
+
+.catalog-item-link
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 2
+
+.catalog-item-title
+	width: 100%
+	padding: 30px 25px
+	background-color: rgba(0, 0, 0, 0.38)
+	backdrop-filter: blur(5px)
+	position: relative
+	z-index: 1
+	color: #fff
+	font-weight: bold
+	font-size: 15px
+	line-height: 1.37
+	+tr
+
+	span
+		display: inline-block
+		position: relative
+
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: $accent
+			transform-origin: top left
+			+tr
+			transform: scaleX(0)
+
+.catalog-item-img
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 0
+
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(39, 39, 39, 0.3)
+
+	img
+		display: block
+		object-fit: cover
+		width: 100%
+		height: 100%
+		
+.s-catalog
+	padding-bottom: 90px
+	position: relative
+	
+	&:after
+		content: ''
+		width: 119px
+		height: 277px
+		position: absolute
+		left: 0
+		bottom: 30%
+		background-image: url(../images/dist/offer-img-6.png)
+		-webkit-background-size: contain
+		background-size: contain
+		background-position: top 0 left 0
+		background-repeat: no-repeat
+
+.s-catalog-page
+	position: relative
+
+	&:after
+		content: ''
+		width: 119px
+		height: 277px
+		position: absolute
+		right: 0
+		bottom: 24%
+		background-image: url(../images/dist/offer-img-9.png)
+		-webkit-background-size: contain
+		background-size: contain
+		background-position: top 0 right 0
+		background-repeat: no-repeat

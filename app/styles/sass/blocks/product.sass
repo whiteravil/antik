@@ -1,0 +1,115 @@
+.s-product-main-window
+	padding-bottom: 120px
+
+.main-window-img
+	margin-top: 46px
+	
+	img
+		width: 100%
+		margin-left: -20%
+		
+.s-buy
+	padding: 90px 0 45px
+	line-height: 1.37
+	
+	.section-title
+		margin-bottom: 28px
+		
+.buy-item
+	display: flex
+	margin: 0 -17px 40px
+	
+	&:last-child
+		margin-bottom: 0
+	
+	&:nth-child(even)
+		flex-direction: row-reverse
+		
+	&:first-child
+		.buy-item-text
+			padding-top: 28px
+	
+	> *
+		width: 50%
+		flex-shrink: 0
+		padding: 0 17px
+		
+.buy-item-img
+	img
+		display: block
+		width: 100%
+		
+.s-gallery
+	padding: 45px 0 90px
+	
+.gallery
+	display: grid
+	grid-template-columns: repeat(5, 1fr)
+	grid-gap: 35px 25px
+	
+.gallery-item
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		
+.s-purchase
+	padding: 90px 0 65px
+	position: relative
+	line-height: 1.37
+	
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-image: url(../images/dist/advantages-img.jpg)
+		background-repeat: no-repeat
+		background-position: center
+		-webkit-background-size: cover
+		background-size: cover
+		opacity: .1
+	
+	.container
+		position: relative
+		z-index: 1
+		
+.purchase
+	ul
+		list-style-type: none
+		padding: 0
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -15px
+		
+		li
+			width: 33.33333%
+			padding: 0 15px
+			margin-bottom: 25px
+
+			a
+				display: inline-block
+				position: relative
+				color: #000
+				font-size: 20px
+				padding-left: 28px
+				+tr
+				
+				&:hover
+					color: $accent
+					
+					&:before
+						background-color: $accent
+						transform: rotate(45deg)
+				
+				&:before
+					content: ''
+					position: absolute
+					width: 10px
+					height: 10px
+					left: 0
+					top: 9px
+					background-color: #262626
+					+tr
