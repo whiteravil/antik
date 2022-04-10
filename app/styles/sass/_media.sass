@@ -58,6 +58,7 @@
 	.main-window-img
 		img
 			margin-left: 0
+			left: 0
 
 	.purchase
 		ul
@@ -402,14 +403,23 @@
 	.gallery
 		grid-gap: 12px
 		grid-template-columns: repeat(3, 1fr)
+		
+	.final-tiles-gallery
+		.ftg-items
+			grid-gap: 12px
+			grid-template-columns: repeat(3, 1fr)
 
 	.s-purchase
 		padding: 50px 0
 
 	.main-window-img
+		&:after
+			display: none
+			
 		img
 			width: 250px
-
+			position: static
+			
 	.contacts
 		display: block
 
@@ -771,6 +781,10 @@
 
 	.gallery
 		grid-template-columns: 1fr 1fr
+		
+	.final-tiles-gallery
+		.ftg-items
+			grid-template-columns: 1fr 1fr
 
 	.s-purchase
 		.section-title
